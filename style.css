@@ -1,0 +1,2 @@
+:root{--ivory:#FDFBF7;--espresso:#1A1A1A;--border:#767676;--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;font-family:var(--font-sans)}a{color:inherit}.nav-right button{cursor:pointer;background:none;border:none;font:inherit}.btn-primary:hover{background:var(--espresso);color:var(--ivory)}.footer{padding:40px;border-top:1px solid var(--border)}
