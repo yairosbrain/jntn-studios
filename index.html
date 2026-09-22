@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNTN Studios | קולקציית בסיס של יוקרה שקטה ומינימליזם</title>
+    <meta name="description" content="גלו את JNTN Studios, מותג אופנה המציע קולקציית בסיס של יוקרה שקטה. מינימליזם מוקפד, חומרים טבעיים וגזרות על-זמניות ליומיום.">
+    <link rel="canonical" href="https://jntn-studios.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Jost:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root{--ivory:#FDFBF7;--espresso:#1A1A1A;--border:#767676;--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Jost',system-ui,sans-serif}
+        body{background-color:var(--ivory);color:var(--espresso);font-family:var(--font-sans);line-height:1.6;margin:0}
+        .navbar{display:flex;justify-content:space-between;padding:15px 20px;border-bottom:1px solid var(--border);align-items:center;position:sticky;top:0;background:var(--ivory);z-index:100}
+        .hero{height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px}
+        .hero h1{font-family:var(--font-serif);font-size:2rem;margin-bottom:1rem}
+        .btn-primary{display:inline-block;text-decoration:none;color:var(--espresso);border:2px solid var(--espresso);padding:12px 30px;transition:opacity 0.2s}
+        .collections{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;padding:40px}
+        .collection-item{aspect-ratio:1/1;background:#E8E4DF;display:flex;align-items:center;justify-content:center;border:1px solid var(--border)}
+        .cart-drawer{position:fixed;top:0;right:-100%;width:100%;max-width:400px;height:100%;background:var(--ivory);border-left:1px solid var(--border);transition:transform 0.3s ease-in-out;padding:40px;z-index:1000;box-sizing:border-box}
+        .cart-drawer.open{transform:translateX(-100%)}
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar"><div class="nav-left">JNTN Studios</div><div class="nav-center"><a href="/collection">צפייה בקולקציה</a></div><div class="nav-right"><button id="cart-toggle" aria-expanded="false">סל קניות (0)</button></div></nav>
+    <main>
+        <header class="hero"><h1>הגדרה חדשה ליומיום.</h1><p>קולקציית הבסיס. מינימליזם מוקפד.</p><a href="/collection" class="btn-primary">צפייה בקולקציה</a></header>
+        <section class="collections">
+            <div class="collection-item" role="img" aria-label="קולקציית סריגים">סריגים</div>
+            <div class="collection-item" role="img" aria-label="קולקציית חייטות">חייטות</div>
+            <div class="collection-item" role="img" aria-label="אביזרים">אביזרים</div>
+        </section>
+    </main>
+    <div id="cart-drawer" class="cart-drawer" aria-hidden="true"><h2>הסל שלך</h2><p>הסל ריק.</p><button id="close-cart">סגירה</button></div>
+    <script src="script.js" defer></script>
+</body>
+</html>
